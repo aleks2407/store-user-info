@@ -2,6 +2,13 @@
 
 > `Courses-Web-App`
 
+
+
+## WIREFRAME
+
+![wireframe](./wireframe.jpg)
+
+---
 ## 0. Set-Up
 
 _A User can see the initial repository and live demo_
