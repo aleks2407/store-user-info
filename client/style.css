@@ -1,3 +1,109 @@
 body {
-  background-color: peachpuff;
+  background: url('https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') no-repeat;
+  background-size: cover;
+ animation: fadein 4s;
+    -webkit-animation: fadein 4s; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+/* CONTAINER FOR FORM*/
+
+.con{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 252, 252, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  animation: fadein 4s;
+    -webkit-animation: fadein 4s; 
+    
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.sec{
+  float: right;
+  
+}
+
+/* DISPLAY ALL FILES*/
+
+aside{
+  position: absolute;
+  top: 10%;
+  left: 55%;
+ animation: fadein 4s;
+    -webkit-animation: fadein 4s; 
+    
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.card{
+   background: rgba(255, 252, 252, 0.733);
+}
+
+/* OPENINIG ANIMATIONS*/
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(51, 117, 204) 50%, rgb(55, 51, 58) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+#firstpage{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  height: 60px;
+  
+
 }
