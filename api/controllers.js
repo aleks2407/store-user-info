@@ -83,6 +83,23 @@ const controllers = {
 			next();
 		});
 	},
+getAllFiles:(req,res,next)=>{			// get all .json files that are in the data folder 
+		fs.readdir(DATA_DIR,(err,list)=>{
+			if (err && err.code === 'ENOENT') {
+      res.status(404).end();
+      return;
+    }
+    if (err) {
+      next(err);
+      return;
+    }
+    res.json(list)
+
+
+		})
+
+	},
+
 };
 
 /**

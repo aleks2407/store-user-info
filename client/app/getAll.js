@@ -1,0 +1,28 @@
+export const renderAllFiles = (files) => {
+  const filesList = files
+    .map(fileName => {
+      const file = document.createElement('span');
+      file.innerHTML = fileName;
+      const viewbtn = document.createElement('button')
+      viewbtn.innerHTML= 'View';
+      viewbtn.className = 'btn btn-light';
+      const deletebtn = document.createElement('button');
+      deletebtn.innerHTML = 'Delete';
+      deletebtn.className = 'btn btn-light';
+     
+      const li = document.createElement('li');
+      li.appendChild(file);
+      li.appendChild(viewbtn);
+      li.appendChild(deletebtn);
+
+      return li;
+    })
+    .reduce((all, next) => {
+      all.appendChild(next);
+      return all;
+    }, document.createElement('ul'));
+const container = document.getElementById('files');
+  container.innerHTML = '';
+  container.appendChild(filesList);
+};
+

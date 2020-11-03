@@ -36,3 +36,17 @@ This user story has been developed through a branch called 'saveUserInfo'.
 - Store user info in their unique files
 - Refresh the form after submit
 - Store all unique IDs
+
+## 2. Get all files
+
+**As a site visitor, I want to see all the saved files .**
+
+This user story has been developed through a branch called 'getall'.
+
+> Assign to **Gelila**
+
+### Node.js || JavaScript || DOM
+
+- Create a get Method for frontend and backend
+- Render all the files on the frontend 
+- Create 'view' and 'delete' buttons for each file
