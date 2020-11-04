@@ -50,3 +50,29 @@ This user story has been developed through a branch called 'getAll'.
 - Create a get Method for frontend and backend
 - Render all the files on the frontend 
 - Create 'view' and 'delete' buttons for each file
+
+## 3. Edit User
+
+**As a site visitor, I want be able to edit user information.**
+
+This user story has been developed through a branch called 'edit-user'.
+
+> Assign to **Eltayeb**
+
+### Node.js
+
+- write editUser function
+- Write backend handler
+- Write a validation middle ware
+
+### Javascript
+
+- Add eventlistener
+
+### HTML
+
+- Add edit button
+
+### JSON
+
+- Add validation schema
