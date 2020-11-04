@@ -1,4 +1,5 @@
 export const renderAllFiles = (files) => {
+
   const filesList = files
     .map(fileName => {
       const file = document.createElement('span');
@@ -26,3 +27,19 @@ const container = document.getElementById('files');
   container.appendChild(filesList);
 };
 
+export const getAll = (event)=>{
+event.preventDefault();
+  fetch('/api')
+  .then(res => {
+    if (!res.ok) {
+      throw res;
+    }
+    return res.json();
+  })
+  .then(files => {
+    renderAllFiles(files);
+    
+  })
+  .catch(err => console.error(err));
+
+}
