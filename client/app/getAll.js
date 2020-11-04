@@ -1,5 +1,8 @@
 export const renderAllFiles = (files) => {
+ if(files.length === 0){
+   document.getElementById('files').innerHTML = ' Sorry! There are no files to show!'
 
+ }else{
   const filesList = files
     .map(fileName => {
       const file = document.createElement('span');
@@ -25,6 +28,7 @@ export const renderAllFiles = (files) => {
 const container = document.getElementById('files');
   container.innerHTML = '';
   container.appendChild(filesList);
+}
 };
 
 export const getAll = (event)=>{

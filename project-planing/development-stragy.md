@@ -41,7 +41,7 @@ This user story has been developed through a branch called 'saveUserInfo'.
 
 **As a site visitor, I want to see all the saved files .**
 
-This user story has been developed through a branch called 'getall'.
+This user story has been developed through a branch called 'getAll'.
 
 > Assign to **Gelila**
 

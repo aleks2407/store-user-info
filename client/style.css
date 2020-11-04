@@ -115,3 +115,6 @@ li :nth-child(1){
   margin: 10px;
 
 }
+ul{
+  list-style: none;
+}
