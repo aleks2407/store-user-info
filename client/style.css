@@ -39,7 +39,7 @@ body {
         opacity:1;
     }
 }
-
+/* the cancel button should be in the right*/
 .sec{
   float: right;
   
@@ -106,4 +106,15 @@ aside{
   height: 60px;
   
 
+}
+li :nth-child(2){
+  margin: 10px;
+
+}
+li :nth-child(1){
+  margin: 10px;
+
+}
+ul{
+  list-style: none;
 }
