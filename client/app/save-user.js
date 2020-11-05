@@ -24,7 +24,7 @@ export const saveUserInfo = (event) => {
 			body: JSON.stringify(userInfo),
 			headers: {
 				'Content-Type': 'application/json; charset=UTF-8',
-			},
+			}
 		})
 			.then((res) => {
 				if (res.ok) {
