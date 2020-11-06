@@ -78,3 +78,17 @@ This user story has been developed through a branch called 'edit-user'.
 ### JSON
 
 - Add validation schema
+
+## 4. Delete User File
+
+**As a site visitor, I want to delete the file from the list by pushing the button "Delete" .**
+
+This user story has been developed through a branch called 'deleteUI'.
+
+> Assign to **Aleksandra**
+
+### Javascript
+
+- Write a post javascript method to delete the file from the displayed list of all files
+- Add to each delete button an unique ID
+- Add an eventListener to the delete-button
