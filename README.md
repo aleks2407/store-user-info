@@ -5,13 +5,13 @@
   <p align="center">
     Let's start to explore the project 🚀 
     <br />
-    <a href="https://mametur.github.io/restful-courses"><strong>Check the docs 📄</strong></a>
+    <a href="https://mametur.github.io/courses-web-app/"><strong>Check the docs 📄</strong></a>
     <br />
-    <a href="https://mametur.github.io/restful-courses/">View Demo 💡</a>
+    <a href="https://mametur.github.io/courses-web-app/">View Demo 💡</a>
     ·
-    <a href="https://github.com/mametur/restful-courses/issues?q=is%3Aissue+is%3Aclosed">Report Bug 🐞</a>
+    <a href="https://github.com/mametur/courses-web-app/issues?q=is%3Aissue+is%3Aclosed">Report Bug 🐞</a>
     ·
-    <a href="https://github.com/mametur/restful-courses/pulls?q=is%3Apr+is%3Aclosed">Request Feature ⚒</a>
+    <a href="https://github.com/mametur/courses-web-app/pulls?q=is%3Apr+is%3Aclosed">Request Feature ⚒</a>
   </p>
 </p>
 
@@ -26,7 +26,7 @@
 
 ## About The Project
 
-will be filled later
+This project aims to build server using Express.js framework in the Node.js and interaction with user inputs to store their inputs in the file system. Basically this app works as a CRUD application without database (database is files in this project).
 
 ### Built With
 
@@ -50,7 +50,7 @@ will be filled later
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/mametur/restful-courses/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/mametur/courses-web-app/blob/master/LICENSE) for more information.
 
 ## Acknowledgements
 
@@ -61,12 +61,12 @@ Distributed under the MIT License. See [LICENSE](https://github.com/mametur/rest
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/badge/5-Contributors%20-brightgreen
-[contributors-url]: https://github.com/mametur/restful-courses/graphs/contributors
+[contributors-url]: https://github.com/mametur/courses-web-app/graphs/contributors
 [forks-shield]: https://img.shields.io/badge/-Forks-blue
-[forks-url]: https://github.com/mametur/restful-courses/network/members
+[forks-url]: https://github.com/mametur/courses-web-app/network/members
 [issues-shield]: https://img.shields.io/badge/-ISSUES-green
-[issues-url]: https://github.com/mametur/restful-courses/issues?q=is%3Aissue+is%3Aclosed
+[issues-url]: https://github.com/mametur/courses-web-app/issues?q=is%3Aissue+is%3Aclosed
 [pr-shield]: https://img.shields.io/badge/-Pull%20Requests%20-blue
-[pr-url]: https://github.com/mametur/restful-courses/pulls?q=is%3Apr+is%3Aclosed
+[pr-url]: https://github.com/mametur/courses-web-app/pulls?q=is%3Apr+is%3Aclosed
 [license-shield]: https://img.shields.io/badge/-LICENSE-brightgreen
-[license-url]: https://github.com/mametur/restful-courses/blob/main/LICENSE
+[license-url]: https://github.com/mametur/courses-web-app/blob/master/LICENSE

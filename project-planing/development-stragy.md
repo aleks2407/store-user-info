@@ -2,6 +2,8 @@
 
 > `Courses-Web-App`
 
+This project aims to build server using Express.js framework in the Node.js and interaction with user inputs to store their inputs in the file system. Basically this app works as a CRUD application without database (database is files in this project).
+
 ## WIREFRAME
 
 ![wireframe](./wireframe.jpg)
@@ -48,7 +50,7 @@ This user story has been developed through a branch called 'getAll'.
 ### Node.js || JavaScript || DOM
 
 - Create a get Method for frontend and backend
-- Render all the files on the frontend 
+- Render all the files on the frontend
 - Create 'view' and 'delete' buttons for each file
 
 ## 3. Edit User
