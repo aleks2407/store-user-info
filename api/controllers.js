@@ -6,8 +6,19 @@ const Joi = require('joi');
 const chalk = require('chalk');
 const config = require('../config');
 
+// util package@Tiba
+const util = require('util');
+const tv4 = require('tv4');
+
 const DATA_DIR = path.join(__dirname, '..', config.DATA_DIR);
 const ID_DIR = path.join(__dirname, '..', config.ID_DIR);
+
+// schema to validate user input@Tiba
+const USER_SCHEMA = require('../middleware/user-schema.json');
+
+// read and write files with promise @Tiba
+const writeFile = util.promisify(fs.writeFile);
+const readDir = util.promisify(fs.readdir)
 
 const controllers = {
 	addUser: (req, res, next) => {
@@ -99,6 +110,68 @@ getAllFiles:(req,res,next)=>{			// get all .json files that are in the data fold
 		})
 
 	},
+
+
+	/*  
+ URL: '/user', method: PUT 
+read files ==> modify the required ==> write it back to the file system@Tiba >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*/
+editUser:  async  (req, res) => {
+	const userData = req.body;
+   
+   const isValid = tv4.validate(userData, USER_SCHEMA)
+
+   if (!isValid) {
+	 const error = tv4.error
+	 console.error(error)
+
+	 res.status(400).json({
+	   error: {
+		 message: error.message,
+		 dataPath: error.dataPath
+	   }
+	 })
+	 return
+   } 
+
+	try {
+	 const userFiles = await readDir(DATA_DIR);
+
+	 
+	 const userFilesNoExt = userFiles.map(file => path.parse(file).name.split('-')[0]);
+	 const nameToBeUpdate = req.body.name;
+
+	   if (userFilesNoExt.includes(nameToBeUpdate)) {
+
+	  const indexOfUser = userFilesNoExt.indexOf(nameToBeUpdate);
+	  console.log(indexOfUser);
+	  const fileName = userFiles[Number(indexOfUser)];
+	  
+	  const idToBeUpdate = path.parse(fileName).name.split('-')[1];
+	  const newUser = Object.assign({}, userData);
+	  newUser.id = idToBeUpdate;
+	  delete newUser['ids'];
+	   const newUserDataString = JSON.stringify(newUser, null, '  ');
+
+	   await writeFile(`${DATA_DIR}/${fileName}`, newUserDataString);
+
+	   res.json(`${nameToBeUpdate} has been edited`);
+	 } else {
+	   res.json(`no entry with name ${nameToBeUpdate}`);
+	 } 
+
+   } catch (err) {
+	 console.log(err);
+
+	 if (err && err.code === 'ENOENT') {
+	   res.status(404).end();
+	   return;
+	 }
+
+
+   } 
+ }
+// End of Edit
 
 };
 
